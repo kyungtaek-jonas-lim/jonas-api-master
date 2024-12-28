@@ -1,19 +1,20 @@
-const express = require('express');
-const axios = require('axios');
-require('dotenv').config();
-const { getUTCDate } = require('../../utils/time');
+import express, { Request, Response, Router } from 'express';
+import axios, { AxiosError } from 'axios';
+import dotenv from 'dotenv';
+import { getUTCDate } from '../../utils/time';
 
+dotenv.config();
 
 // ======================================
 // Settings
 // ======================================
-const router = express.Router();
+const router: Router = Router();
 
 
 // ======================================
 // API
 // ======================================
-router.post('', async (req, res) => {
+router.post('', async (req: Request, res: Response) => {
     const query = req.body.query;
     let model = req.body.model;
     
@@ -21,7 +22,8 @@ router.post('', async (req, res) => {
         || (typeof query !== "string")
         ||  query.trim() === ""
     ) {
-        return res.status(400).send({error: "'query' is required"});
+        res.status(400).send({error: "'query' is required"});
+        return;
     }
 
     console.log(`[${getUTCDate()}] [OPENAI] request raw data - query: ${query}, model: ${model}`);
@@ -59,12 +61,27 @@ router.post('', async (req, res) => {
         res.json({ reply: reply });
         console.log(`[${getUTCDate()}] [OPENAI] response data - reply: ${reply}`);
 
-    } catch (error) {
-        console.error(`[${getUTCDate()}] [OPENAI] Error occured - code: ${error.code}, status: ${error.
-            response.status}, statusText: ${error.response.statusText}`);
-        console.error(`[${getUTCDate()}] [OPENAI] Request - mothod: ${error.config.method}, url: ${error.config.url}, data: ${error.config.data}`);
-        // console.error(`[${getUTCDate()}] [OPENAI] ${error}`);
-        res.status(500).send( { error: `Error while processing the request - ${error.response.statusText}` });
+    } catch (error: unknown) {
+        if (error instanceof AxiosError) { // axios error
+            const config = error.config;
+            const response = error.response;
+            if (config) {
+                console.error(`[${getUTCDate()}] [OPENAI] Request method: ${config.method}, url: ${config.url}, data: ${config.data}`);
+            }
+            if (response) {
+                console.error(`[${getUTCDate()}] [OPENAI] AxiosError occurred - code: ${error.code}, status: ${response.status}, statusText: ${response.statusText}`);
+                res.status(500).send({ error: `Error while processing the request - ${response.statusText}` });
+            } else {
+                console.error(`[${getUTCDate()}] [OPENAI] No response from the server - code: ${error.code}`);
+                res.status(500).send({ error: "No response from the server" });
+            }
+        } else if (error instanceof Error) { // common error
+            console.error(`[${getUTCDate()}] [OPENAI] Generic error occurred - ${error.message}`);
+            res.status(500).send({ error: `An error occurred: ${error.message}` });
+        } else { // known error
+            console.error(`[${getUTCDate()}] [OPENAI] Unknown error occurred`);
+            res.status(500).send({ error: "An unknown error occurred" });
+        }
     }
 });
 
@@ -72,4 +89,4 @@ router.post('', async (req, res) => {
 // ======================================
 // Export
 // ======================================
-module.exports = { router };
+export { router };

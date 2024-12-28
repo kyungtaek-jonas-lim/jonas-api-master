@@ -16,6 +16,7 @@
 
 ## Reference
 - Node.js
+- TypeScript
 - Port : 3000
 
 ## Table of Contents
@@ -24,7 +25,7 @@
 - [Installation](#installation)
 
 ## Introduction
-API Integration Service on AWS on AWS (ECS, ECR)
+API Integration Service on AWS (Lambda, ECR) (TO-BE)
 
 ## Features
 - AI
@@ -32,13 +33,13 @@ API Integration Service on AWS on AWS (ECS, ECR)
 	- GPT2 (HuggingFace)
 
 ## Library
-- `axios` (1.7.9)
+- `axios`
 	- MIT License
-- `dotenv` (16.4.7)
+- `dotenv`
 	- MIT License
-- `express` (4.21.2)
+- `express`
 	- MIT License
-- `luxon` (3.5.0)
+- `luxon`
 	- MIT License
 
 ## Installation
@@ -54,7 +55,8 @@ Follow these instructions to set up your development environment.
 2. **Setup Environment:**
 	- Install Library
 		```bash
-		npm install axios@1.7.9 dotenv@16.4.7 express@4.21.2 luxon@3.5.0
+		npm install axios@1.7.9 dotenv@16.4.7 express@4.21.2 luxon@3.5.0 typescript@5.7.2 ts-node@10.9.2
+		npm install @types/axios @types/dotenv @types/express @types/luxon
 		```
 	- rename `Dockerfile-sample` to `Dockerfile`
 	- rename `.env_sample` to `.env`
@@ -80,3 +82,9 @@ Follow these instructions to set up your development environment.
 			- Click **Generate token**.
 		4. **Save the Token**: Copy the generated token and store it securely, as it will not be shown again.
 			- Put your API Key into `.env` file or Dockerfile as a environment variable, `HUGGINGFACE_API_KEY`.
+
+4. **Start Application:**
+	- Start application
+		```bash
+		npx ts-node ./src/app.ts
+		```

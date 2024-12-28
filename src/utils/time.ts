@@ -1,21 +1,21 @@
-const { DateTime } = require('luxon');
+import { DateTime } from 'luxon';
 
 // KST (Seoul, Korea)
-function getKSTTime() {
+function getKSTTime(): string | null {
     return DateTime.now().setZone('Asia/Seoul').toISO();
 }
 
 // PST (Los Angeles, Vancouver)
-function getPSTTime() {
+function getPSTTime(): string | null {
     return DateTime.now().setZone('America/Los_Angeles').toISO();
 }
 
 // UTC
-function getUTCDate() {
+function getUTCDate(): string | null {
     return DateTime.utc().toISO();
 }
 
-module.exports = {
+export {
     getKSTTime,
     getPSTTime,
     getUTCDate

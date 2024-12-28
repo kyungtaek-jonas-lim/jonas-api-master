@@ -1,7 +1,7 @@
-const express = require('express');
-const { router: aiRouter } = require('./routes/ai')
-require('dotenv').config();
-
+import express from 'express';
+import { router as aiRouter } from './routes/ai';
+import dotenv from 'dotenv'
+dotenv.config();
 
 // ====================================
 // Settings

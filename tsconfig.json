@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES6",  // Specifies the target ECMAScript version (default: "ES3")
+    "module": "commonjs", // Specifies the module system to use (e.g., commonjs, esnext, etc.)
+    "strict": true, // Enables all strict type-checking options
+    "resolveJsonModule": true, // Allow importing JSON files as modules
+    "esModuleInterop": true, // Enables interoperability between CommonJS and ES modules
+    "declaration": false, // Generate .d.ts declaration files (useful when building a library)
+    "skipLibCheck": true, // Skips type checking of declaration files
+    "forceConsistentCasingInFileNames": true, // Ensure that casing is correct in imports.
+    "outDir": "./dist", // Specifies the output directory for compiled files
+    "rootDir": "./src" // Specifies the root directory of input files
+  },
+  "include": ["src/**/*"], // Specifies files and directories to include in the compilation
+  "exclude": ["node_modules", "dist"], // Specifies files and directories to exclude from the compilation
+}

@@ -1,8 +1,9 @@
-const express = require('express');
-const { router: openAIRouter } = require('./ai/openai');
-const { router: gpt2Router } = require('./ai/gpt2');
 
-const router = express.Router();
+import express, { Router } from 'express';
+import { router as openAIRouter } from './ai/openai';
+import { router as gpt2Router } from './ai/gpt2';
+
+const router: Router = express.Router();
 
 // ======================================
 // Settings
@@ -14,4 +15,4 @@ router.use('/gpt2', gpt2Router);
 // ======================================
 // Export
 // ======================================
-module.exports = { router };
+export { router };
