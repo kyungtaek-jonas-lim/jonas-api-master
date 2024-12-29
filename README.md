@@ -2,9 +2,11 @@
 ### *`jonas-api-master`*
 
 ## Author
-- KyungTaek Lim (Jonas Lim)
+- **KyungTaek Lim (Jonas Lim)**
 - Software Engineer
-- https://www.linkedin.com/in/kyungtaek-jonas-lim
+- **Email:** kyungtaekjonaslim@gmail.com
+- **LinkedIn:** [KyungTaek Jonas Lim](https://www.linkedin.com/in/kyungtaek-jonas-lim)
+- **GitHub:** [kyungtaek-jonas-lim](https://github.com/kyungtaek-jonas-lim)
 
 ## Description
 - Api Integration Service
