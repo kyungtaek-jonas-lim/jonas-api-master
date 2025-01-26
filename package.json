@@ -13,7 +13,7 @@
   },
   "name": "jonas-api-master",
   "description": "> KyungTaek Lim (Jonas Lim)\r \t> Software Engineer\r \t> https://www.linkedin.com/in/kyungtaek-jonas-lim",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

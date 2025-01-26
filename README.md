@@ -13,8 +13,7 @@
 	- AI
 		- OpenAI
 		- Hugging Face (GPT2)
-	- Google (TO-BE)
-- Last Updated at 2024.12.27
+	- Google OIDC (TO-BE)
 
 ## Reference
 - Node.js
