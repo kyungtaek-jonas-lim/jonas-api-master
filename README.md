@@ -86,6 +86,8 @@ Follow these instructions to set up your development environment.
 			- Click **Generate token**.
 		4. **Save the Token**: Copy the generated token and store it securely, as it will not be shown again.
 			- Put your API Key into `.env` file or Dockerfile as a environment variable, `OPENAI_CHAT_COMPLETION_URL`.
+	
+	- [Google OIDC](https://github.com/kyungtaek-jonas-lim/jonas-api-master/blob/main/ref/oidc/google/google_oidc_1_preperation.md)
 
 4. **Start Application:**
 	- Start application
