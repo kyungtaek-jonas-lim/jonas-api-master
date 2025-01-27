@@ -2,13 +2,13 @@
 
 #### **1. Test with Incorrect Access URI**
 - [Wrong Access URI](http://localhost:3000/v1/auth/oidc/google)
-  ![Wrong Access URI](https://raw.githubusercontent.com/kyungtaek-jonas-lim/jonas-api-master/main/ref/oidc/google/media/3_test/google_oidc_test_1_wrong_access.png)
+  - ![Wrong Access URI](https://raw.githubusercontent.com/kyungtaek-jonas-lim/jonas-api-master/main/ref/oidc/google/media/3_test/google_oidc_test_1_wrong_access.png)
 
 #### **2. Test with Correct Access URI**
 - [OIDC Access URI](http://localhost:3000/v1/auth/oidc/google?scope=openid%20email%20profile)
-  ![OIDC Access URI](https://raw.githubusercontent.com/kyungtaek-jonas-lim/jonas-api-master/main/ref/oidc/google/media/3_test/google_oidc_test_2_oidc_access.png)
-  ![Sign in with OIDC](https://raw.githubusercontent.com/kyungtaek-jonas-lim/jonas-api-master/main/ref/oidc/google/media/3_test/google_oidc_test_3_sign_in_with_oidc.png)
-  ![OIDC Success Data](https://raw.githubusercontent.com/kyungtaek-jonas-lim/jonas-api-master/main/ref/oidc/google/media/3_test/google_oidc_test_4_oidc_success_data.png)
+  - ![OIDC Access URI](https://raw.githubusercontent.com/kyungtaek-jonas-lim/jonas-api-master/main/ref/oidc/google/media/3_test/google_oidc_test_2_oidc_access.png)
+  - ![Sign in with OIDC](https://raw.githubusercontent.com/kyungtaek-jonas-lim/jonas-api-master/main/ref/oidc/google/media/3_test/google_oidc_test_3_sign_in_with_oidc.png)
+  - ![OIDC Success Data](https://raw.githubusercontent.com/kyungtaek-jonas-lim/jonas-api-master/main/ref/oidc/google/media/3_test/google_oidc_test_4_oidc_success_data.png)
 
 ---
 
