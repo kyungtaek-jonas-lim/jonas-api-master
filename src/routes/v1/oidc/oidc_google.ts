@@ -27,6 +27,7 @@ router.get('', async (req: Request, res: Response): Promise<void> => {
         access_type: 'offline', // 'offline': get Refresh Token too, 'online': only Access Token
 
     }).toString();
+    console.info(`[OIDC - Google] Redirect - scope: ${scope}, url: ${config.googleAuthUrl}?${queryParams}`);
     res.redirect(`${config.googleAuthUrl}?${queryParams}`);
 });
 
@@ -39,6 +40,7 @@ router.get('/redirect', async (req: Request, res: Response): Promise<void> => {
     const { code } = req.query;
 
     if (!code) {
+        console.error(`[OIDC - Google] Invalid code`);
         res.status(400).send('Authorization code not provided');
         return;
     }
@@ -60,6 +62,8 @@ router.get('/redirect', async (req: Request, res: Response): Promise<void> => {
         );
 
         const { id_token, access_token } = tokenResponse.data;
+        console.info(`[OIDC - Google] Code: ${code}`);
+        console.info(`[OIDC - Google] Token data requested with code: ${JSON.stringify(tokenResponse.data)}`);
 
         /**
          * Step 4: Decode and validate ID token
@@ -69,6 +73,7 @@ router.get('/redirect', async (req: Request, res: Response): Promise<void> => {
             res.status(400).send('Invalid ID token');
             return;
         }
+        console.info(`[OIDC - Google] ID Token: ${JSON.stringify(decodedToken)}`);
 
         /**
          * Step 5: (Not neccessary) Verify token signature using a library or Google's public key (advanced)
@@ -78,6 +83,7 @@ router.get('/redirect', async (req: Request, res: Response): Promise<void> => {
         });
 
         const userInfo = userInfoResponse.data;
+        console.info(`[OIDC - Google] Additional userInfo requested with access token: ${JSON.stringify(userInfo)}`);
         
         // Process user Info (store in database, create session, etc.)
         res.json({ message: 'Authentication successful', user: userInfo });
