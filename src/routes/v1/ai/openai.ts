@@ -1,9 +1,7 @@
 import express, { Request, Response, Router } from 'express';
 import axios, { AxiosError } from 'axios';
-import dotenv from 'dotenv';
-import { getUTCDate } from '../../utils/time';
-
-dotenv.config();
+import { config } from '../../../config/dotenvConfig';
+import { getUTCDate } from '../../../utils/time';
 
 // ======================================
 // Settings
@@ -40,7 +38,7 @@ router.post('', async (req: Request, res: Response) => {
 
     try {
         const response = await axios.post(
-            'https://api.openai.com/v1/chat/completions',
+            config.openaiChatCompletionUrl,
             {
                 model: model,
                 messages: [
@@ -51,7 +49,7 @@ router.post('', async (req: Request, res: Response) => {
             },
             {
                 headers: {
-                    'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+                    'Authorization': `Bearer ${config.openaiApiKey}`,
                     'Content-Type': 'application/json'
                 }
             }

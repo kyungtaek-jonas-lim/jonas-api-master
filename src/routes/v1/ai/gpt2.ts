@@ -1,9 +1,7 @@
 import express, { Request, Response, Router } from 'express';
 import axios from 'axios';
-import dotenv from 'dotenv';
-import { getUTCDate } from '../../utils/time';
-
-dotenv.config();
+import { config } from '../../..//config/dotenvConfig';
+import { getUTCDate } from '../../../utils/time';
 
 // ======================================
 // Settings
@@ -25,7 +23,7 @@ router.post('', async (req: Request, res: Response) => {
     console.log(`[${getUTCDate()}] [GPT2] request data - query: ${query}`);
     try {
         const response = await axios.post(
-            'https://api-inference.huggingface.co/models/gpt2',
+            config.huggingfaceGpt2Url,
             {
                 inputs: query,
                 temperature: 0.5, // Controls the randomness of the output (higher = more random)
@@ -35,7 +33,7 @@ router.post('', async (req: Request, res: Response) => {
             },
             {
                 headers: {
-                    'Authorization': `Bearer ${process.env.HUGGINGFACE_API_KEY}`,
+                    'Authorization': `Bearer ${config.huggingfaceApiKey}`,
                     'Content-Type': 'application/json'
                 }
             }

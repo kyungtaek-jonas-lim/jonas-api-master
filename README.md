@@ -11,9 +11,9 @@
 ## Description
 - Api Integration Service
 	- AI
-		- OpenAI
-		- Hugging Face (GPT2)
-	- Google OIDC (TO-BE)
+		- [OpenAI](https://github.com/kyungtaek-jonas-lim/jonas-api-master/blob/main/src/routes/v1/ai/openai.ts)
+		- [Hugging Face (GPT2)](https://github.com/kyungtaek-jonas-lim/jonas-api-master/blob/main/src/routes/v1/ai/gpt2.ts)
+	- [Google OIDC (OAuth2.0)](https://github.com/kyungtaek-jonas-lim/jonas-api-master/blob/main/ref/oidc/google/google_oidc_index.md)
 
 ## Reference
 - Node.js
@@ -42,6 +42,8 @@ API Integration Service on AWS (Lambda, ECR) (TO-BE)
 	- MIT License
 - `luxon`
 	- MIT License
+- `jsonwebtoken`
+	- MIT License
 
 ## Installation
 Follow these instructions to set up your development environment.
@@ -56,8 +58,9 @@ Follow these instructions to set up your development environment.
 2. **Setup Environment:**
 	- Install Library
 		```bash
-		npm install axios@1.7.9 dotenv@16.4.7 express@4.21.2 luxon@3.5.0 typescript@5.7.2 ts-node@10.9.2
-		npm install @types/axios @types/dotenv @types/express @types/luxon
+		# Basic
+		npm install axios@1.7.9 dotenv@16.4.7 express@4.21.2 luxon@3.5.0 typescript@5.7.2 ts-node@10.9.2 jsonwebtoken@9.0.2
+		npm install @types/axios @types/dotenv @types/express @types/luxon @types/jsonwebtoken
 		```
 	- rename `Dockerfile-sample` to `Dockerfile`
 	- rename `.env_sample` to `.env`
@@ -82,7 +85,7 @@ Follow these instructions to set up your development environment.
 			- Select the appropriate permissions (e.g., read, write).
 			- Click **Generate token**.
 		4. **Save the Token**: Copy the generated token and store it securely, as it will not be shown again.
-			- Put your API Key into `.env` file or Dockerfile as a environment variable, `HUGGINGFACE_API_KEY`.
+			- Put your API Key into `.env` file or Dockerfile as a environment variable, `OPENAI_CHAT_COMPLETION_URL`.
 
 4. **Start Application:**
 	- Start application
