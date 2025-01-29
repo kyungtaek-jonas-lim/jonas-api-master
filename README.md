@@ -14,6 +14,7 @@
 		- [OpenAI](https://github.com/kyungtaek-jonas-lim/jonas-api-master/blob/main/src/routes/v1/ai/openai.ts)
 		- [Hugging Face (GPT2)](https://github.com/kyungtaek-jonas-lim/jonas-api-master/blob/main/src/routes/v1/ai/gpt2.ts)
 	- [Google OIDC (OAuth2.0)](https://github.com/kyungtaek-jonas-lim/jonas-api-master/blob/main/ref/oidc/google/google_oidc_index.md)
+	- [MongoDB](https://github.com/kyungtaek-jonas-lim/jonas-api-master/blob/main/ref/mongodb_index.md)
 
 ## Reference
 - Node.js
@@ -98,7 +99,7 @@ Follow these instructions to set up your development environment.
 		```
 5. **Install MongoDB & mongosh**
 	- [MongoDB Install](https://github.com/kyungtaek-jonas-lim/jonastudy/blob/main/concept/no_sql/mongodb/mongodb_install_en.md) ([en](https://github.com/kyungtaek-jonas-lim/jonastudy/blob/main/concept/no_sql/mongodb/mongodb_install_en.md) / [ko](https://github.com/kyungtaek-jonas-lim/jonastudy/blob/main/concept/no_sql/mongodb/mongodb_install_ko.md))
-	- Create database & collections using mongosh
+	- Create database & collections using `mongosh`
 		```bash
 		mongosh
 		use jonas-api-master
