@@ -19,20 +19,12 @@
 ## Reference
 - Node.js
 - TypeScript
+- Express
 - Port : 3000
 
 ## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
+- [Library](#library)
 - [Installation](#installation)
-
-## Introduction
-API Integration Service on AWS (Lambda, ECR) (TO-BE)
-
-## Features
-- AI
-	- OpenAI
-	- GPT2 (HuggingFace)
 
 ## Library
 - `axios`
