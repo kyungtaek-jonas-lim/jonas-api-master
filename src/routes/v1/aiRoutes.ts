@@ -1,9 +1,10 @@
+
 import express, { Router } from 'express';
-import { router as aiRouter } from './aiRoutes';
-import { router as authRouter } from './authRoutes';
+import { router as openAIRouter } from './ai/openaiRoutes';
+import { router as gpt2Router } from './ai/gpt2Routes';
 
 /**
- * @description V1 Router
+ * @description AI Router
  * @author Jonas Lim
  */
 
@@ -12,8 +13,8 @@ const router: Router = express.Router();
 // ======================================
 // Settings
 // ======================================
-router.use('/ai', aiRouter);
-router.use('/auth', authRouter);
+router.use('/openai', openAIRouter);
+router.use('/gpt2', gpt2Router);
 
 
 // ======================================

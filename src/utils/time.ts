@@ -1,5 +1,10 @@
 import { DateTime } from 'luxon';
 
+/**
+ * @description Time Util
+ * @author Jonas Lim
+ */
+
 // KST (Seoul, Korea)
 function getKSTTime(): string | null {
     return DateTime.now().setZone('Asia/Seoul').toISO();

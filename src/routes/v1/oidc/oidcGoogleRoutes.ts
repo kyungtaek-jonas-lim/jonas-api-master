@@ -3,8 +3,12 @@ import axios from 'axios';
 import jwt from 'jsonwebtoken';
 import { config } from '../../../config/dotenvConfig';
 
-const router = express.Router();
+/**
+ * @description OIDC Router
+ * @author Jonas Lim
+ */
 
+const router = express.Router();
 
 /**
  * Step 1: Redirect to Google for user authentication

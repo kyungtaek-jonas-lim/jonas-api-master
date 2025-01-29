@@ -1,6 +1,11 @@
 
 import express, { Router } from 'express';
-import { router as oidcGoogleRouter } from './oidc/oidc_google';
+import { router as oidcGoogleRouter } from './oidc/oidcGoogleRoutes';
+
+/**
+ * @description Auth Router
+ * @author Jonas Lim
+ */
 
 const router: Router = express.Router();
 

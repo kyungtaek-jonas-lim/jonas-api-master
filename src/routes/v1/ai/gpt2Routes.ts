@@ -1,7 +1,12 @@
 import express, { Request, Response, Router } from 'express';
 import axios from 'axios';
-import { config } from '../../..//config/dotenvConfig';
+import { config } from '../../../config/dotenvConfig';
 import { getUTCDate } from '../../../utils/time';
+
+/**
+ * @description GPT2 Router
+ * @author Jonas Lim
+ */
 
 // ======================================
 // Settings

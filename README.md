@@ -44,6 +44,8 @@ API Integration Service on AWS (Lambda, ECR) (TO-BE)
 	- MIT License
 - `jsonwebtoken`
 	- MIT License
+- `mongoose`
+	- MIT License
 
 ## Installation
 Follow these instructions to set up your development environment.
@@ -59,7 +61,7 @@ Follow these instructions to set up your development environment.
 	- Install Library
 		```bash
 		# Basic
-		npm install axios@1.7.9 dotenv@16.4.7 express@4.21.2 luxon@3.5.0 typescript@5.7.2 ts-node@10.9.2 jsonwebtoken@9.0.2
+		npm install axios@1.7.9 dotenv@16.4.7 express@4.21.2 luxon@3.5.0 typescript@5.7.2 ts-node@10.9.2 jsonwebtoken@9.0.2 mongoose@8.9.5
 		npm install @types/axios @types/dotenv @types/express @types/luxon @types/jsonwebtoken
 		```
 	- rename `Dockerfile-sample` to `Dockerfile`
@@ -93,4 +95,14 @@ Follow these instructions to set up your development environment.
 	- Start application
 		```bash
 		npx ts-node ./src/app.ts
+		```
+5. **Install MongoDB & mongosh**
+	- [MongoDB Install](https://github.com/kyungtaek-jonas-lim/jonastudy/blob/main/concept/no_sql/mongodb/mongodb_install_en.md) ([en](https://github.com/kyungtaek-jonas-lim/jonastudy/blob/main/concept/no_sql/mongodb/mongodb_install_en.md) / [ko](https://github.com/kyungtaek-jonas-lim/jonastudy/blob/main/concept/no_sql/mongodb/mongodb_install_ko.md))
+	- Create database & collections using mongosh
+		```bash
+		mongosh
+		use jonas-api-master
+		show collections
+		db.createCollection("<Item>")
+		show collections
 		```

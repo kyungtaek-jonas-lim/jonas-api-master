@@ -3,6 +3,11 @@ import axios, { AxiosError } from 'axios';
 import { config } from '../../../config/dotenvConfig';
 import { getUTCDate } from '../../../utils/time';
 
+/**
+ * @description OpenAI Router
+ * @author Jonas Lim
+ */
+
 // ======================================
 // Settings
 // ======================================
