@@ -14,7 +14,7 @@
 		- [OpenAI](https://github.com/kyungtaek-jonas-lim/jonas-api-master/blob/main/src/routes/v1/ai/openai.ts)
 		- [Hugging Face (GPT2)](https://github.com/kyungtaek-jonas-lim/jonas-api-master/blob/main/src/routes/v1/ai/gpt2.ts)
 	- [Google OIDC (OAuth2.0)](https://github.com/kyungtaek-jonas-lim/jonas-api-master/blob/main/ref/oidc/google/google_oidc_index.md)
-	- [MongoDB](https://github.com/kyungtaek-jonas-lim/jonas-api-master/blob/main/ref/mongodb_index.md)
+	- [MongoDB](https://github.com/kyungtaek-jonas-lim/jonas-api-master/blob/main/ref/mongodb/mongodb_index.md)
 
 ## Reference
 - Node.js
