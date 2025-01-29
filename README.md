@@ -8,23 +8,30 @@
 - **LinkedIn:** [KyungTaek Jonas Lim](https://www.linkedin.com/in/kyungtaek-jonas-lim)
 - **GitHub:** [kyungtaek-jonas-lim](https://github.com/kyungtaek-jonas-lim)
 
-## Description
+## Reference
+- Node.js
+- TypeScript
+- Express
+- Port: 3000
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Library](#library)
+- [Installation](#installation)
+
+## Introduction
+Api Integration Service
+
+## Features
 - Api Integration Service
 	- AI
 		- [OpenAI](https://github.com/kyungtaek-jonas-lim/jonas-api-master/blob/main/src/routes/v1/ai/openai.ts)
 		- [Hugging Face (GPT2)](https://github.com/kyungtaek-jonas-lim/jonas-api-master/blob/main/src/routes/v1/ai/gpt2.ts)
 	- [Google OIDC (OAuth2.0)](https://github.com/kyungtaek-jonas-lim/jonas-api-master/blob/main/ref/oidc/google/google_oidc_index.md)
+- Handy components
 	- [MongoDB](https://github.com/kyungtaek-jonas-lim/jonas-api-master/blob/main/ref/mongodb/mongodb_index.md)
-
-## Reference
-- Node.js
-- TypeScript
-- Express
-- Port : 3000
-
-## Table of Contents
-- [Library](#library)
-- [Installation](#installation)
+	- [Shorten URL](https://github.com/kyungtaek-jonas-lim/jonas-api-master/blob/main/src/routes/common/urlRoutes.ts)
 
 ## Library
 - `axios`
@@ -38,6 +45,16 @@
 - `jsonwebtoken`
 	- MIT License
 - `mongoose`
+	- MIT License
+- `shortid`
+	- MIT License
+- `redis`
+	- MIT License
+- `base62`
+	- MIT License
+- `uuid`
+	- MIT License
+- `base-x`
 	- MIT License
 
 ## Installation
@@ -54,8 +71,8 @@ Follow these instructions to set up your development environment.
 	- Install Library
 		```bash
 		# Basic
-		npm install axios@1.7.9 dotenv@16.4.7 express@4.21.2 luxon@3.5.0 typescript@5.7.2 ts-node@10.9.2 jsonwebtoken@9.0.2 mongoose@8.9.5
-		npm install @types/axios @types/dotenv @types/express @types/luxon @types/jsonwebtoken
+		npm install axios@1.7.9 dotenv@16.4.7 express@4.21.2 luxon@3.5.0 typescript@5.7.2 ts-node@10.9.2 jsonwebtoken@9.0.2 mongoose@8.9.5 shortid@2.2.17 redis@4.7.0 crypto@1.0.1 uuid@11.0.5 base-x@5.0.0
+		npm install @types/axios @types/dotenv @types/express @types/luxon @types/jsonwebtoken @types/shortid
 		```
 	- rename `Dockerfile-sample` to `Dockerfile`
 	- rename `.env_sample` to `.env`

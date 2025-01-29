@@ -32,6 +32,11 @@ export const config = {
     googleUserinfoUrl: process.env.GOOGLE_USERINFO_URL || 'https://www.googleapis.com/oauth2/v3/userinfo',
 
     // ----------------------------------------
-    // DB
+    // Software System (DB, In-Memory)
+    // MongoDB
     dbMongoDbUri: process.env.DB_MONGO_DB_URI || "mongodb://localhost:27017/jonas-api-master",
+
+    // Redis
+    inMemoryRedisHost: process.env.IN_MEMORY_REDIS_HOST || "localhost",
+    inMemoryRedisPort: Number(process.env.IN_MEMORY_REDIS_PORT) || 6379,
 }

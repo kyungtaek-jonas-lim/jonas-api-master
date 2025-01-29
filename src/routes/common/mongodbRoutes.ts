@@ -23,7 +23,7 @@ router.post("/items", async (req: Request, res: Response) => {
 
 router.get("/items", async (_, res: Response) => {
     try {
-        const items: Item[] = await service.getAllItem();
+        const items: Item[] = await service.getAllItems();
         res.status(200).json(items);
     } catch (error) {
         res.status(500).json({ error: "Failed to fetch items" });

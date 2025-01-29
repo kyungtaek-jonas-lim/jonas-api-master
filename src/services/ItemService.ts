@@ -26,7 +26,7 @@ export class ItemService {
         return this.repository.create(itemData);
     }
 
-    async getAllItem(): Promise<Item[]> {
+    async getAllItems(): Promise<Item[]> {
         return this.repository.findAll();
     }
 

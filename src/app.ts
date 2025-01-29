@@ -1,7 +1,8 @@
 import express from 'express';
 import { router as baseRouter } from './routes/base';
-import { config } from './config/dotenvConfig'
-import { connectToMongoDB } from './config/databaseConfig'
+import { config } from './config/dotenvConfig';
+import { connectToMongoDB } from './config/databaseConfig';
+import { connectToRedis } from './config/inMemoryConfig';
 
 /**
  * @description App
@@ -26,5 +27,6 @@ app.use('', baseRouter);
 // ====================================
 app.listen(config.port, () => {
     connectToMongoDB();
+    connectToRedis();
     console.log(`Server is running on port ${config.port}`);
 });

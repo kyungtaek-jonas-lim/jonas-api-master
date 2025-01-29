@@ -1,5 +1,6 @@
 import express, { Router } from 'express';
 import { router as dbRouter } from './mongodbRoutes';
+import { router as urlRouter } from './urlRoutes';
 
 /**
  * @description Common Router
@@ -13,6 +14,7 @@ const router: Router = express.Router();
 // Settings
 // ======================================
 router.use('/mongodb', dbRouter);
+router.use('/url', urlRouter);
 
 
 // ======================================
