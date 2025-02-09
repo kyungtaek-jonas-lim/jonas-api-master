@@ -107,7 +107,7 @@ Follow these instructions to set up your development environment.
 		npx ts-node ./src/app.ts
 		```
 5. **Install MongoDB & mongosh**
-	- [MongoDB Install](https://github.com/kyungtaek-jonas-lim/jonastudy/blob/main/concept/no_sql/mongodb/mongodb_install_en.md) ([en](https://github.com/kyungtaek-jonas-lim/jonastudy/blob/main/concept/no_sql/mongodb/mongodb_install_en.md) / [ko](https://github.com/kyungtaek-jonas-lim/jonastudy/blob/main/concept/no_sql/mongodb/mongodb_install_ko.md))
+	- [MongoDB Install](https://github.com/kyungtaek-jonas-lim/jonastudy/blob/main/concept/database/no_sql/mongodb/mongodb_install_en.md) ([en](https://github.com/kyungtaek-jonas-lim/jonastudy/blob/main/concept/database/no_sql/mongodb/mongodb_install_en.md) / [ko](https://github.com/kyungtaek-jonas-lim/jonastudy/blob/main/concept/database/no_sql/mongodb/mongodb_install_ko.md))
 	- Create database & collections using `mongosh`
 		```bash
 		mongosh

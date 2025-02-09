@@ -4,7 +4,7 @@ import mongoose, { Schema, Document } from "mongoose";
  * @description MongoDB Test Respository
  * @author Jonas Lim
  * @date Jan 29, 2025
- * @reference ORM vs ODM (https://github.com/kyungtaek-jonas-lim/jonastudy/blob/main/concept/orm_odm/orm_odm_en.md)
+ * @reference ORM vs ODM (https://github.com/kyungtaek-jonas-lim/jonastudy/blob/main/concept/database/orm_odm/orm_odm_en.md)
  */
 export interface Item extends Document {
     name: string;
